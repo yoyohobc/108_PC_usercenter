@@ -13,14 +13,14 @@ OS = 'Windows'
 #OS = 'Mac'
 
 # 指定測試設備
-device = 'iPAD'
+device = 'PC'
 #device = ''
-#deviceType = 'iPAD'
-deviceType = 'iPAD'
+#deviceType = 'PC'
+deviceType = 'PC'
 mobileEmulation = {
     #'deviceName' : 'iPhone 6'
-    #'deviceName' : 'iPad Mini'
-    'deviceName': 'Apple iPad 3 / 4'
+    #'deviceName' : 'PC Mini'
+    'deviceName': 'PC'
 }
 if (device == 'mobile'):
     width = '375'

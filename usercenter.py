@@ -55,26 +55,7 @@ else:
 
         browser = webdriver.Chrome(chrome_options=options)
 
-# Login
-'''userID = '86100294'
-PW = 'abc123'
-while True:
-    browser.get(PC_URL)
-    time.sleep(3)
-
-    browser.find_element_by_name("customerNumber").click()
-    browser.find_element_by_name("customerNumber").clear()
-    browser.find_element_by_name("customerNumber").send_keys(userID)
-    time.sleep(3)
-    browser.find_element_by_name("password").clear()
-    browser.find_element_by_name("password").send_keys(PW)
-    time.sleep(3)
-    browser.find_element_by_name("password").send_keys(Keys.ENTER)
-    time.sleep(6)
-    #browser.find_element_by_css_selector('#root > div > div > div.mt-14.sm\:mt-0 > div > div > a').click()
-    #browser.close()
-'''
-if (deviceType == 'iPAD'):
+if (deviceType == 'PC'):
     testcase_path = ".//testcase/PC"
 else:
     testcase_path = ".//testcase/iPhone"
@@ -95,7 +76,7 @@ def creat_suite():
 
 now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime())
 
-if (deviceType == 'iPAD'):
+if (deviceType == 'PC'):
     if not os.path.exists('report/PC'):  os.makedirs('report/PC')
     reports_address = "report/PC/"
     report_path = "report/PC/" + now + ".html"

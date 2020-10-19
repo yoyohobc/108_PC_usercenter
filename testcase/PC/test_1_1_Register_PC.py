@@ -26,6 +26,11 @@ class WebDriverTests(unittest.TestCase):
 
 		go_register.click()
 		time.sleep(2)
+
+		# 開啟第二個視窗,可操作後台
+		'''browser2 = webdriver.Chrome(chrome_options=self.options,desired_capabilities=d)
+		browser2.get('https://www.google.com.tw/')
+		time.sleep(2)'''
 		#註冊頁面
 		register_phone = browser.find_element_by_id('accountNumber')
 
