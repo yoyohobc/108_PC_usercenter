@@ -18,9 +18,10 @@ class WebDriverTests(unittest.TestCase):
 	def test_1_2_Register_PC(self):
 		print('==========test_1_2_Register_PC_註冊頁面、點擊開立真實賬號，切換到真實賬號註冊頁面==========')
 		browser = self.browser
-		browser.get('http://ac108.trexttd.com/registerNextPc.html')
+		#真實帳號註冊頁面
+		browser.get(real_register_url)
 		time.sleep(3)
-
+		#檢查頁面元素
 		check_eles =[['迷你','//*[@id="mian"]/div[2]/div/div[2]/ul/li[1]'],
 		['标准','//*[@id="mian"]/div[2]/div/div[2]/ul/li[2]'],
 		['金钻','//*[@id="mian"]/div[2]/div/div[2]/ul/li[3]'],
@@ -36,10 +37,5 @@ class WebDriverTests(unittest.TestCase):
 				print(ele[0],'顯示正確')
 			else:
 				print('錯誤!',ele[0],'顯示:',result)
-				raise AssertionError('錯誤!',ele[0],'顯示:',result) 
-
-
-
-		
-
+				raise AssertionError('錯誤!',ele[0],'顯示:',result)
 

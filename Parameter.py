@@ -5,8 +5,12 @@ from selenium.webdriver.common.keys import Keys
 import unittest, time, re, os
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from random import Random
-# URL
+#用戶中心登入頁面
 PC_URL = 'http://trader.will68.com/smartfx-pcusercenter/'
+#開啟真實帳號
+create_account_url = 'http://ac108.trexttd.com/registerPc.html'
+#真實帳號註冊頁面
+real_register_url = 'http://ac108.trexttd.com/registerNextPc.html'
 random = Random()
 # 指定OS
 OS = 'Windows'
@@ -80,3 +84,10 @@ def setUpBrowser(self,language='zh-tw'):
             # self.options.add_argument('headless')
             
             self.browser = webdriver.Chrome(chrome_options=self.options,desired_capabilities=d)
+def Random_String_Number(self,length):
+    chars = '0123456789'
+    random_numbers = ''
+    for j in range(length):
+        random_numbers+=chars[random.randint(0,len(chars) - 1)]
+
+    return random_numbers
