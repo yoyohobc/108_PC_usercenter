@@ -25,13 +25,13 @@ class WebDriverTests(unittest.TestCase):
 		browser.find_element_by_xpath('//*[@id="supplementSubmi"]/div[4]/a[1]').click()
 		time.sleep(2)
 		title = browser.find_element_by_xpath('//*[@id="mian"]/div[2]/div/div').text
-		if (title=='开启真账户'):
-			print('开启真实账户成功')
+		if (title=='开启真实账户'):
+			print('正確!开启真实账户顯示:',title)
 		else:
 			print('錯誤!开启真实账户顯示:',title)
 			raise AssertionError('錯誤!开启真实账户顯示:',title)
 		#註冊頁面元素檢查
-		'''register_phone = browser.find_element_by_xpath('//*[@id="accountNumber"]')
+		register_phone = browser.find_element_by_xpath('//*[@id="accountNumber"]')
 
 		register_password = browser.find_element_by_id('thPassword')
 
@@ -46,4 +46,4 @@ class WebDriverTests(unittest.TestCase):
 				element[0]
 				print(element[1],"顯示正確!")
 			except NoSuchElementException:
-				print(element[1],"顯示錯誤!")'''
+				print(element[1],"顯示錯誤!")
