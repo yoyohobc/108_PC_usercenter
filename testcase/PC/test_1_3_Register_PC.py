@@ -45,4 +45,7 @@ class WebDriverTests(unittest.TestCase):
 			else:
 				print('錯誤!提示顯示:',error_result)
 				raise AssertionError('錯誤!提示顯示:',error_result)
-
+		phone_field.clear()
+		phone_field.send_keys(higher_than_eleven)
+		time.sleep(1)
+		print(phone_field.text)
